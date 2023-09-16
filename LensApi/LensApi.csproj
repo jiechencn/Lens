@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Me.JieChen.Lens.Api</RootNamespace>
+    <AssemblyName>Me.JieChen.Lens.Api</AssemblyName>
+    <UserSecretsId>aspnet-LensApi-a598b720-5c18-495c-9af5-9b8c622a4a0b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.22" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.22" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="2.13.1" />
+    <PackageReference Include="Microsoft.Identity.Web.MicrosoftGraph" Version="2.13.1" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="2.13.1" />
+  </ItemGroup>
+
+</Project>
