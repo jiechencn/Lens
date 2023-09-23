@@ -9,9 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheTest", "Test\CacheTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cache", "Dev\Cache\Cache.csproj", "{196A2F86-8796-47F4-8215-B529934C4558}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Dev\Extensions\Extensions.csproj", "{6BC16043-6B19-431D-8A07-EC4D367CBD56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions", "Dev\Extensions\Extensions.csproj", "{6BC16043-6B19-431D-8A07-EC4D367CBD56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionsTest", "Test\ExtensionsTest\ExtensionsTest.csproj", "{BD95C812-4114-4FBB-B5E0-BEEF4896D59A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtensionsTest", "Test\ExtensionsTest\ExtensionsTest.csproj", "{BD95C812-4114-4FBB-B5E0-BEEF4896D59A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Dev\Logging\Logging.csproj", "{5AB36C69-91D4-491B-80B0-9EC2E87FF3F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingTest", "Test\LoggingTest\LoggingTest.csproj", "{241D0ADE-F01A-4B90-A49C-2723D78D380F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{BD95C812-4114-4FBB-B5E0-BEEF4896D59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD95C812-4114-4FBB-B5E0-BEEF4896D59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD95C812-4114-4FBB-B5E0-BEEF4896D59A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AB36C69-91D4-491B-80B0-9EC2E87FF3F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB36C69-91D4-491B-80B0-9EC2E87FF3F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB36C69-91D4-491B-80B0-9EC2E87FF3F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB36C69-91D4-491B-80B0-9EC2E87FF3F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{241D0ADE-F01A-4B90-A49C-2723D78D380F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{241D0ADE-F01A-4B90-A49C-2723D78D380F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{241D0ADE-F01A-4B90-A49C-2723D78D380F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{241D0ADE-F01A-4B90-A49C-2723D78D380F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
