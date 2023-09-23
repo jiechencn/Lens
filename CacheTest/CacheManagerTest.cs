@@ -1,13 +1,9 @@
-﻿using Me.JieChen.Lens.Api.Utility;
+﻿using Me.JieChen.Lens.Cache;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Test.JieChen.Lens.Api.Utility;
+namespace Test.JieChen.Lens.Cache;
 
 [TestClass]
 public class CacheManagerTest
@@ -31,14 +27,14 @@ public class CacheManagerTest
         Mock<AbstractFoo> mockFoo = new Mock<AbstractFoo>();
 
         // Act
-        var result1 = CacheManager.GetInstance().GetAsync<string, Student>(key, () => ReadFromExternalDataSourceAsync(key, mockFoo.Object)).Result;
+        var result1 = CacheManager.GetInstance().GetAsync(key, () => ReadFromExternalDataSourceAsync(key, mockFoo.Object)).Result;
         // Assert
         mockFoo.Verify(f => f.Do(), Times.Once);
 
         // Arrange
         mockFoo.Invocations.Clear();
         // Act
-        var result2 = CacheManager.GetInstance().GetAsync<string, Student>(key, () => ReadFromExternalDataSourceAsync(key, mockFoo.Object)).Result;
+        var result2 = CacheManager.GetInstance().GetAsync(key, () => ReadFromExternalDataSourceAsync(key, mockFoo.Object)).Result;
         // Assert
         mockFoo.Verify(f => f.Do(), Times.Never);
 
@@ -54,7 +50,7 @@ public class CacheManagerTest
 
     private class Student
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
         public int Age { get; set; }
     }
 }

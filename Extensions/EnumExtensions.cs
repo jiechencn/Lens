@@ -2,9 +2,9 @@
 using System.Reflection;
 using System;
 
-namespace Me.JieChen.Lens.Api.Utility.Extentions;
+namespace Me.JieChen.Lens.Extensions;
 
-static class EnumExtensions
+public static class EnumExtensions
 {
     /// <summary>
     /// Get a enum type's detailed description

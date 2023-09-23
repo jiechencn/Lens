@@ -1,10 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <RootNamespace>Test.JieChen.Lens.Api</RootNamespace>
-    <AssemblyName>Test.JieChen.Lens.Api</AssemblyName>
-    <UserSecretsId>aspnet-LensApi-a598b720-5c18-495c-9af5-9b8c622a4a0b</UserSecretsId>
+    <RootNamespace>Test.JieChen.Lens.Cache</RootNamespace>
+    <AssemblyName>Test.JieChen.Lens.Cache</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LensApi\LensApi.csproj" />
+    <ProjectReference Include="..\Cache\Cache.csproj" />
   </ItemGroup>
 
 </Project>

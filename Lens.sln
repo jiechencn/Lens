@@ -5,7 +5,13 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LensApi", "LensApi\LensApi.csproj", "{A8B87D17-89B3-410E-851A-BF83EBF3BDFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LensApiTest", "LensApiTest\LensApiTest.csproj", "{37E72933-0996-4707-A774-E899D2F25866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheTest", "CacheTest\CacheTest.csproj", "{37E72933-0996-4707-A774-E899D2F25866}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cache", "Cache\Cache.csproj", "{196A2F86-8796-47F4-8215-B529934C4558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{6BC16043-6B19-431D-8A07-EC4D367CBD56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionsTest", "ExtensionsTest\ExtensionsTest.csproj", "{BD95C812-4114-4FBB-B5E0-BEEF4896D59A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{37E72933-0996-4707-A774-E899D2F25866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37E72933-0996-4707-A774-E899D2F25866}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37E72933-0996-4707-A774-E899D2F25866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{196A2F86-8796-47F4-8215-B529934C4558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{196A2F86-8796-47F4-8215-B529934C4558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{196A2F86-8796-47F4-8215-B529934C4558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{196A2F86-8796-47F4-8215-B529934C4558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BC16043-6B19-431D-8A07-EC4D367CBD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BC16043-6B19-431D-8A07-EC4D367CBD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BC16043-6B19-431D-8A07-EC4D367CBD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BC16043-6B19-431D-8A07-EC4D367CBD56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD95C812-4114-4FBB-B5E0-BEEF4896D59A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD95C812-4114-4FBB-B5E0-BEEF4896D59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD95C812-4114-4FBB-B5E0-BEEF4896D59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD95C812-4114-4FBB-B5E0-BEEF4896D59A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

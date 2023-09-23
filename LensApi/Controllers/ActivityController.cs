@@ -25,7 +25,7 @@ namespace LensApi.Controllers
         [HttpGet]
         public async Task<string> Get()
         {
-            return "hello";
+            return await Task.FromResult("hello").ConfigureAwait(false);
         }
     }
 }

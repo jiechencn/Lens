@@ -3,7 +3,7 @@ using System;
 using Microsoft.Extensions.Caching.Memory;
 using System.Threading;
 
-namespace Me.JieChen.Lens.Api.Utility;
+namespace Me.JieChen.Lens.Cache;
 
 public sealed class CacheManager
 {
@@ -57,18 +57,17 @@ public sealed class CacheManager
         }
     }
 
-    public async Task<TValue> GetAsync<TKey, TValue>(TKey key, Func<Task<TValue>> callbackIfNotFroundFromCache)
+    public async Task<TValue?> GetAsync<TKey, TValue>(TKey key, Func<Task<TValue>> callbackIfNotFroundFromCache)
         where TKey : class
         where TValue : class
     {
-        if (cache.TryGetValue(key, out TValue value))
-        {
-            return value;
-        }
-
         try
         {
             await cacheLock.WaitAsync().ConfigureAwait(false);
+            if (cache.TryGetValue(key, out TValue? value))
+            {
+                return value;
+            }
             TValue newValue = await callbackIfNotFroundFromCache.Invoke().ConfigureAwait(false);
             cache.Set<TValue>(key, newValue, entryOptions);
             return newValue;

@@ -1,6 +1,6 @@
 ﻿using Me.JieChen.Lens.Api.Options;
 using Me.JieChen.Lens.Api.Utility;
-using Me.JieChen.Lens.Api.Utility.Extentions;
+using Me.JieChen.Lens.Extensions;
 using Microsoft.AspNetCore.Authentication;
 using System.Linq;
 using System.Security.Claims;
