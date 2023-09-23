@@ -4,12 +4,14 @@ using Azure.Security.KeyVault.Secrets;
 using Me.JieChen.Lens.Api.Auth;
 using Me.JieChen.Lens.Api.Host;
 using Me.JieChen.Lens.Api.Options;
+using MeLogging = Me.JieChen.Lens.Logging;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Microsoft.Identity.Web;
 using System;
 
@@ -31,6 +33,14 @@ public class Program
             .AddJsonFile("appsettings.Test.json", optional: true, reloadOnChange: true)
             .AddJsonFile("appsettings.Development.json", optional: true, reloadOnChange: true);
         var config = builder.Configuration;
+
+        builder.Host.ConfigureAppConfiguration((context, config) =>
+        {
+            using var loggerFactory = LoggerFactory.Create(builder => builder.AddDebug().AddConsole());
+            var logger = new MeLogging.Logger<Program>(loggerFactory.CreateLogger<Program>());
+            var env = context.HostingEnvironment;
+            logger.LogInformation($"Working in {env.EnvironmentName} now.");
+        });
 
         BuildAppOptions(config, out AppOptions appOptions);
 

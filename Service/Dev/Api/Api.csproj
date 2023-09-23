@@ -20,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Cache\Cache.csproj" />
     <ProjectReference Include="..\Extensions\Extensions.csproj" />
+    <ProjectReference Include="..\Logging\Logging.csproj" />
   </ItemGroup>
 
 </Project>

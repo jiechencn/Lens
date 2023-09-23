@@ -1,4 +1,5 @@
 ﻿using Me.JieChen.Lens.Api.Options;
+using Me.JieChen.Lens.Logging;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Threading;
@@ -8,12 +9,14 @@ namespace Me.JieChen.Lens.Api.Dameon;
 
 class ActivityAuditHostedService : IHostedService, IDisposable
 {
+    private readonly ILogger<ActivityAuditHostedService> logger;
     private ActivityAuditOptions options;
     private Timer? realtimeTimer = null;
     private Timer? historicalTimer = null;
-    public ActivityAuditHostedService(ActivityAuditOptions options)
+    public ActivityAuditHostedService(ActivityAuditOptions options, ILogger<ActivityAuditHostedService> logger)
     {
         this.options = options;
+        this.logger = logger;
     }
 
     public Task StartAsync(CancellationToken cancellationToken)
@@ -26,12 +29,12 @@ class ActivityAuditHostedService : IHostedService, IDisposable
 
     private void DoRealTimeAudit(object? state)
     {
-        Console.WriteLine(nameof(DoRealTimeAudit));
+        logger.LogDebug(nameof(DoRealTimeAudit));
     }
 
     private void DoHistoricalAudit(object? state)
     {
-        Console.WriteLine(nameof(DoHistoricalAudit));
+        logger.LogDebug(nameof(DoHistoricalAudit));
     }
 
     public Task StopAsync(CancellationToken cancellationToken)
